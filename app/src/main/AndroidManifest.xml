@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActRegistro"></activity>
+        <activity android:name=".Mapa"></activity>
+        <activity android:name=".Consejos" />
+        <activity android:name=".LlamadaEmergencia" />
+        <activity android:name=".Estadistica" />
+        <activity android:name=".MisSintomas" />
+        <activity android:name=".MiEstado" />
+        <activity android:name=".ActRegistro" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
