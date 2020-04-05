@@ -13,12 +13,9 @@ public class ActRegistro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_registro);
     }
-    public void foto(View view){
-        Intent siguiente  = new Intent(this, Foto.class);
-        startActivity(siguiente);
-    }
-    public void main(View view){
-        Intent siguiente  = new Intent(this, MainActivity.class);
+
+    public void evaluacion(View view){
+        Intent siguiente  = new Intent(this, ActEvaluacion.class);
         startActivity(siguiente);
     }
 }

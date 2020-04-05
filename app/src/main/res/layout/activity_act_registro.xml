@@ -49,24 +49,27 @@
         android:id="@+id/txtDocumento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Ingrese número"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        tools:layout_editor_absoluteX="15dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:onClick="foto"
+        android:onClick="evaluacion"
         android:text="Continuar"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDocumento" />
 
     <TextView
         android:id="@+id/textView9"
@@ -96,11 +99,11 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="371dp"
-        android:layout_height="195dp"
+        android:layout_width="338dp"
+        android:layout_height="122dp"
         android:layout_marginTop="32dp"
         android:text="Ingresa los datos de tu documento de identidad  para poder inicar sesión"
-        android:textSize="36sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
