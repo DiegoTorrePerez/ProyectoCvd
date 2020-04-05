@@ -40,13 +40,14 @@
         <activity android:name=".Estadistica" />
         <activity android:name=".MisSintomas" />
         <activity android:name=".MiEstado" />
-        <activity android:name=".ActRegistro" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ActRegistro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
 
         <provider
