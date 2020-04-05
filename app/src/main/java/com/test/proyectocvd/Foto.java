@@ -90,4 +90,8 @@ public class Foto extends AppCompatActivity {
             img.setImageBitmap(imageBitmap);
         }
     }
+    public void SiguienteMenu(View view) {
+        Intent siguiente  = new Intent(this, MainActivity.class);
+        startActivity(siguiente);
+    }
 }

@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MisSintomas">
 
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="339dp"
+        android:layout_height="56dp"
+        android:text="Evaluación de Síntomas"
+        android:textColor="#374C6E"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="49dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

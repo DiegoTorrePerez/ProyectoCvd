@@ -8,11 +8,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="316dp"
-        android:layout_height="372dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="339dp"
+        android:layout_height="443dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
@@ -21,11 +20,22 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="44dp"
         android:onClick="tomarFoto"
         android:text="TOMAR FOTO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="371dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="40dp"
+        android:onClick="SiguienteMenu"
+        android:text="FINALIZAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
