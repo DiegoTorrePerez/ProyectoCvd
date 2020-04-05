@@ -7,6 +7,19 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView34"
+        android:layout_width="109dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="72dp"
+        android:text="Menú"
+        android:textColor="#374C6E"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -149,17 +162,5 @@
         android:text="HOSPITAL"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
-        android:layout_marginLeft="184dp"
-        android:layout_marginTop="52dp"
-        android:onClick="SiguienteFoto"
-        android:text="FOTO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

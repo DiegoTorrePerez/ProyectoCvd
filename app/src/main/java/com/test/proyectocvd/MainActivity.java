@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siguiente);
     }
     public void SiguienteMisSintomas(View view) {
-        Intent siguiente  = new Intent(this, MisSintomas.class);
+        Intent siguiente  = new Intent(this, ActEvaluacion.class);
         startActivity(siguiente);
     }
     public void SiguienteFoto(View view) {
