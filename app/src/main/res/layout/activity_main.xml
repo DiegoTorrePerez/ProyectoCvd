@@ -6,13 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:layout_width="411dp"
+        android:layout_height="731dp"
+        android:background="@drawable/gradiente1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/textView34"
         android:layout_width="109dp"
         android:layout_height="43dp"
         android:layout_marginTop="72dp"
         android:text="Menú"
-        android:textColor="#374C6E"
+        android:textColor="#000000"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.546"
@@ -26,6 +37,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
+        android:textColor="#000000"
+
         android:text="EMERGENCIA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
@@ -114,6 +127,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
+        android:textColor="#000000"
+
         android:layout_marginTop="24dp"
         android:text="MI ESTADO"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,6 +141,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
+        android:textColor="#000000"
+
         android:text="TRIAJE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
@@ -138,6 +155,8 @@
         android:layout_marginLeft="56dp"
         android:layout_marginTop="24dp"
         android:text="ESTADÍSTICAS"
+        android:textColor="#000000"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
 
@@ -148,6 +167,8 @@
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="20dp"
+        android:textColor="#000000"
+
         android:text="CONSEJOS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
@@ -158,6 +179,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="60dp"
+        android:textColor="#000000"
+
         android:layout_marginRight="60dp"
         android:text="HOSPITAL"
         app:layout_constraintEnd_toEndOf="parent"

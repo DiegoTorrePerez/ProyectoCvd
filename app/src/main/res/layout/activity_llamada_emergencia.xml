@@ -6,11 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".LlamadaEmergencia">
 
+    <RelativeLayout
+        android:layout_width="411dp"
+        android:layout_height="731dp"
+        android:background="@drawable/gradiente1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="223dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="56dp"
+        android:text="Llamadas de emergencia"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="217dp"
         android:layout_height="56dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="220dp"
+        android:textColor="#000000"
         android:onClick="Llamada1"
         android:text="LINEA 113"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,11 +44,13 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_width="329dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="44dp"
+        android:textColor="#000000"
         android:text="Linea para dudas adicionales sobre COVID"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -33,6 +60,7 @@
         android:layout_height="56dp"
         android:layout_marginTop="184dp"
         android:onClick="Llamada2"
+        android:textColor="#000000"
         android:text="LINEA 106"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +70,7 @@
         android:id="@+id/textView8"
         android:layout_width="328dp"
         android:layout_height="82dp"
+        android:textColor="#000000"
         android:layout_marginTop="64dp"
         android:text="Linea de emergencia para casos de ahogo, desmayo o alto riesgo en la salud"
         app:layout_constraintEnd_toEndOf="parent"

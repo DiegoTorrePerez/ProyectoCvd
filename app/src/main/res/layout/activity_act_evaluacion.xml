@@ -6,7 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ActEvaluacion">
 
+    <RelativeLayout
+        android:layout_width="411dp"
+        android:layout_height="731dp"
+        android:background="@drawable/gradiente1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="397dp"
         android:layout_height="712dp"
         app:layout_constraintBottom_toBottomOf="parent"

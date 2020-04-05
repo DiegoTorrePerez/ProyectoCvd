@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Foto">
 
+    <RelativeLayout
+        android:layout_width="411dp"
+        android:layout_height="731dp"
+        android:background="@drawable/gradiente1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="339dp"
@@ -23,6 +34,7 @@
         android:layout_marginTop="44dp"
         android:onClick="tomarFoto"
         android:text="TOMAR FOTO"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +47,7 @@
         android:layout_marginTop="40dp"
         android:onClick="SiguienteMenu"
         android:text="FINALIZAR"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />

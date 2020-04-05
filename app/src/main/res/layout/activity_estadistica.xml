@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background"
     tools:context=".Estadistica">
+
+    <RelativeLayout
+        android:layout_width="411dp"
+        android:layout_height="731dp"
+        android:background="@drawable/gradiente1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textView24"
@@ -12,9 +24,11 @@
         android:layout_height="64dp"
         android:layout_marginTop="76dp"
         android:text="Cifras en Perú"
-        android:textColor="#374C6E"
+        android:textColor="#000000"
+
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +39,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="352dp"
+        android:textColor="#000000"
+
         android:text="CASOS NUEVOS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +52,8 @@
         android:layout_marginTop="352dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
+        android:textColor="#000000"
+
         android:text="CASOS TOTALES"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,6 +66,8 @@
         android:layout_marginLeft="56dp"
         android:layout_marginBottom="124dp"
         android:text="RECUPERADOS"
+        android:textColor="#000000"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -59,6 +79,8 @@
         android:layout_marginRight="48dp"
         android:layout_marginBottom="124dp"
         android:text="FALLECIDOS"
+        android:textColor="#000000"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -70,6 +92,7 @@
         android:layout_marginLeft="68dp"
         android:layout_marginTop="260dp"
         android:text="535"
+        android:textColor="#074CB9"
         android:textSize="45sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -81,6 +104,8 @@
         android:layout_marginTop="260dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
+        android:textColor="#074CB9"
+
         android:text="2281"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,6 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:layout_marginEnd="88dp"
+        android:textColor="#074CB9"
         android:layout_marginRight="88dp"
         android:text="83"
         android:textSize="45sp"
@@ -103,10 +129,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
+        android:textColor="#074CB9"
         android:layout_marginLeft="84dp"
         android:layout_marginTop="112dp"
         android:text="914"
         android:textSize="45sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <RelativeLayout
+        android:layout_width="409dp"
+        android:layout_height="118dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="141dp">
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
