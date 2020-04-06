@@ -1,6 +1,6 @@
 ## COVIDTEST
 
-Este repositorio contiene el codigo fuente de la app COVIDTEST
+Este repositorio contiene el codigo fuente de la app COVIDTEST.
 
 ## ¿SOBRE QUÉ TRATA EL PROYECTO COVIDTEST?
 
@@ -24,11 +24,15 @@ https://trello.com/b/RgUQ4k03/covid-19
 
 > LUNACY
 
-Se desarrollo parte del wireframe en LUNACY
+Se desarrollo parte del wireframe en LUNACY.
 
 > Microsoft Word
 
-Se desarrollo el primer informe entregable del proyecto COVIDTEST
+Se desarrollo el primer informe entregable del proyecto COVIDTEST.
+
+> StartUML
+
+Se desarrollo el diagrama de la base de datos.
 
 > GitHub
 
