@@ -39,6 +39,12 @@ Se desarrollo el diagrama de la base de datos.
 Se encuentra todo el código en GitHub:
 https://github.com/DiegoTorrePerez/ProyectoCvd
 
+> Youtube
+
+Demostración del 1er entregable del proyecto:
+https://www.youtube.com/watch?v=TJsMeDEJRGE&feature=youtu.be
+
+
 
 
 
