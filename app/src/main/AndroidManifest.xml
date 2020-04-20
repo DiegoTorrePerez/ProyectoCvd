@@ -49,7 +49,9 @@
             android:label="@string/title_activity_mapa" />
         <activity android:name=".Consejos" />
         <activity android:name=".LlamadaEmergencia" />
-        <activity android:name=".Estadistica" />
+        <activity android:name=".Estadistica">
+
+    </activity>
         <activity android:name=".MisSintomas" />
         <activity android:name=".MiEstado" />
         <activity android:name=".ActRegistro"></activity>
