@@ -23,7 +23,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,9 +52,7 @@
         <activity android:name=".Estadistica" />
         <activity android:name=".MisSintomas" />
         <activity android:name=".MiEstado" />
-        <activity android:name=".ActRegistro">
-
-        </activity>
+        <activity android:name=".ActRegistro"></activity>
         <activity android:name=".MainActivity" />
 
         <provider

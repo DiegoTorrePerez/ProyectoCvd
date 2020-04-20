@@ -15,15 +15,27 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Hashtable;
+import java.util.Map;
 
 public class Foto extends AppCompatActivity {
 
     private ImageView img;
+    String urlfoto = "://dchang.atwebpages.com/index.php/loginCV19";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,8 +102,33 @@ public class Foto extends AppCompatActivity {
             img.setImageBitmap(imageBitmap);
         }
     }
-    public void SiguienteMenu(View view) {
+    public void Escapar(View view) {
         Intent siguiente  = new Intent(this, MainActivity.class);
         startActivity(siguiente);
+    }
+
+    public void enviarImagen(final String nombre,final String cadena) {
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+               StringRequest stringRequest = new StringRequest(Request.Method.POST, urlfoto, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Toast.makeText(Foto.this, response, Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Override
+            protected Map<String,String> getParams() throws AuthFailureError{
+                Map<String,String> params = new Hashtable<>();
+                params.put("nom", nombre);
+                params.put("imagenes", cadena);
+
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
     }
 }

@@ -37,8 +37,5 @@ public class MainActivity extends AppCompatActivity {
         Intent siguiente  = new Intent(this, ActEvaluacion.class);
         startActivity(siguiente);
     }
-    public void SiguienteFoto(View view) {
-        Intent siguiente  = new Intent(this, Foto.class);
-        startActivity(siguiente);
-    }
+
 }

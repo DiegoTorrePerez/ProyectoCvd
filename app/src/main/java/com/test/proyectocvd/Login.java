@@ -41,11 +41,31 @@ public class Login extends AppCompatActivity {
         asignarReferencia();
     }
 
+    public void SiguienteRegistrarse(View view) {
+        Intent siguiente  = new Intent(this, ActRegistro.class);
+        startActivity(siguiente);
+    }
     private void asignarReferencia() {
         txtDocumento = findViewById(R.id.txtDocumento);
         txtContraseña = findViewById(R.id.txtContraseña);
         btnIngresar = findViewById(R.id.btnIngresar);
         txtola = findViewById(R.id.txtola);
+        btnIngresar.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                String documento;
+                documento = txtDocumento.getText().toString();
+                md5 encryption = new md5(txtContraseña.getText().toString());
+                String a = encryption.getEncryption();
+                txtola.setText(a);
+                if(!documento.isEmpty() && !a.isEmpty()){
+                    validarUsuario("http://dchang.atwebpages.com/index.php/loginCV19");
+                }else{
+                    Toast.makeText(Login.this,"Los campos no pueden ser nulos",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         btnIngresar.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -119,6 +139,4 @@ public class Login extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
-
-
 }

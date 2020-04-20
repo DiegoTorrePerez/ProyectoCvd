@@ -7,8 +7,8 @@
     tools:context=".Foto">
 
     <RelativeLayout
-        android:layout_width="411dp"
-        android:layout_height="731dp"
+        android:layout_width="448dp"
+        android:layout_height="802dp"
         android:background="@drawable/gradiente1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,9 +19,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="339dp"
-        android:layout_height="443dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="309dp"
+        android:layout_height="559dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,12 +31,11 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="12dp"
         android:onClick="tomarFoto"
         android:text="TOMAR FOTO"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -44,11 +43,25 @@
         android:id="@+id/button5"
         android:layout_width="371dp"
         android:layout_height="47dp"
-        android:layout_marginTop="40dp"
-        android:onClick="SiguienteMenu"
-        android:text="FINALIZAR"
+        android:layout_marginTop="12dp"
+        android:onClick="Escapar"
+        android:text="Subir Foto"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="Escapar"
+        android:text="Omitir esta vez"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
