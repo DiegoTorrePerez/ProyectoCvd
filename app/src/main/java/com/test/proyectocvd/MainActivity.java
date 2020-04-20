@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(siguiente);
     }
     public void SiguienteMiEstado(View view) {
-        Intent siguiente  = new Intent(this, MiEstado.class);
+        Intent siguiente  = new Intent(this, Contacto.class);
         startActivity(siguiente);
     }
     public void SiguienteMisSintomas(View view) {

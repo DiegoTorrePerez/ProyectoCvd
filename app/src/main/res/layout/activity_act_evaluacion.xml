@@ -7,8 +7,8 @@
     tools:context=".ActEvaluacion">
 
     <RelativeLayout
-        android:layout_width="411dp"
-        android:layout_height="731dp"
+        android:layout_width="448dp"
+        android:layout_height="802dp"
         android:background="@drawable/gradiente1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,8 +19,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="397dp"
-        android:layout_height="712dp"
+        android:layout_width="374dp"
+        android:layout_height="722dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,9 +35,9 @@
                 android:id="@+id/textView13"
                 android:layout_width="339dp"
                 android:layout_height="56dp"
-                android:textColor="#000000"
                 android:layout_marginTop="32dp"
                 android:text="Evaluación de Síntomas"
+                android:textColor="#000000"
                 android:textSize="25sp" />
 
             <TextView
@@ -51,7 +51,7 @@
                 android:textColor="#000000" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/etTemperatura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -73,7 +73,7 @@
                 android:textColor="#000000" />
 
             <RadioGroup
-                android:id="@+id/radioGroup"
+                android:id="@+id/rgTos"
                 android:layout_width="311dp"
                 android:layout_height="134dp"
                 android:layout_marginStart="16dp"
@@ -81,25 +81,25 @@
                 android:layout_marginTop="16dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/rbTos1"
                     android:layout_width="69dp"
                     android:layout_height="wrap_content"
                     android:text="No" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/rbTos2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Leve" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/rbTos3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Moderado" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/rbTos4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Grave" />
@@ -116,7 +116,7 @@
                 android:textColor="#000000" />
 
             <RadioGroup
-                android:id="@+id/radioGroup1"
+                android:id="@+id/rgRespiracion"
                 android:layout_width="311dp"
                 android:layout_height="134dp"
                 android:layout_marginStart="16dp"
@@ -124,25 +124,25 @@
                 android:layout_marginTop="16dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton1"
+                    android:id="@+id/rbRespiracion1"
                     android:layout_width="69dp"
                     android:layout_height="wrap_content"
                     android:text="No" />
 
                 <RadioButton
-                    android:id="@+id/radioButton12"
+                    android:id="@+id/rbRespiracion2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Leve" />
 
                 <RadioButton
-                    android:id="@+id/radioButton13"
+                    android:id="@+id/rbRespiracion3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Moderado" />
 
                 <RadioButton
-                    android:id="@+id/radioButton14"
+                    android:id="@+id/rbRespiracion4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Grave" />
@@ -160,7 +160,7 @@
                 android:textColor="#000000" />
 
             <RadioGroup
-                android:id="@+id/radioGroup3"
+                android:id="@+id/rgGarganta"
                 android:layout_width="311dp"
                 android:layout_height="134dp"
                 android:layout_marginStart="16dp"
@@ -168,25 +168,25 @@
                 android:layout_marginTop="16dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton33"
+                    android:id="@+id/rbGarganta1"
                     android:layout_width="69dp"
                     android:layout_height="wrap_content"
                     android:text="No" />
 
                 <RadioButton
-                    android:id="@+id/radioButton342"
+                    android:id="@+id/rbGarganta2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Leve" />
 
                 <RadioButton
-                    android:id="@+id/radioButton343"
+                    android:id="@+id/rbGarganta3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Moderado" />
 
                 <RadioButton
-                    android:id="@+id/radioButton344"
+                    android:id="@+id/rbGarganta4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Grave" />
@@ -203,7 +203,7 @@
                 android:textColor="#000000" />
 
             <RadioGroup
-                android:id="@+id/radioGroup4"
+                android:id="@+id/rgContacto"
                 android:layout_width="311dp"
                 android:layout_height="78dp"
                 android:layout_marginStart="16dp"
@@ -211,13 +211,13 @@
                 android:layout_marginTop="16dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton23"
+                    android:id="@+id/rbContacto1"
                     android:layout_width="69dp"
                     android:layout_height="wrap_content"
                     android:text="No" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2456"
+                    android:id="@+id/rbContacto2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sí" />
@@ -232,11 +232,11 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="24dp"
-                android:text="¿Has viajado a un país fuera de latinoamérica hace menos de 14 días?"
+                android:text="¿Te has trasladado fuera de tu distrito en los últimos 14 días?"
                 android:textColor="#000000" />
 
             <RadioGroup
-                android:id="@+id/radioGroup443"
+                android:id="@+id/rgDesplazamiento"
                 android:layout_width="311dp"
                 android:layout_height="73dp"
                 android:layout_marginStart="16dp"
@@ -244,13 +244,46 @@
                 android:layout_marginTop="16dp">
 
                 <RadioButton
-                    android:id="@+id/radioButton233"
+                    android:id="@+id/rbDesplazamiento1"
                     android:layout_width="69dp"
                     android:layout_height="wrap_content"
                     android:text="No" />
 
                 <RadioButton
-                    android:id="@+id/radioButton24556"
+                    android:id="@+id/rbDesplazamiento2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sí" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView204"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="¿Trabajas en un centro de salud o perteneces a las fuerzas armadas?"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/rgTrabajo"
+                android:layout_width="311dp"
+                android:layout_height="78dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbTrabajo1"
+                    android:layout_width="69dp"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+
+                <RadioButton
+                    android:id="@+id/rbTrabajo2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sí" />
@@ -259,14 +292,14 @@
             </RadioGroup>
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/btnRegistrarse"
                 android:layout_width="357dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:onClick="foto"
-                android:text="SIGUIENTE"
+                android:onClick="registrarse"
+                android:text="REGISTRAR"
                 android:textAllCaps="false" />
 
         </LinearLayout>

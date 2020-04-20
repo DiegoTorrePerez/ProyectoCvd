@@ -29,4 +29,10 @@ public class LlamadaEmergencia extends AppCompatActivity {
             return;
         startActivity(i);
     }
+    public void Llamada3(View view){
+        Intent i = new Intent(Intent.ACTION_CALL, Uri.parse("tel:105"));
+        if(ActivityCompat.checkSelfPermission(LlamadaEmergencia.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+            return;
+        startActivity(i);
+    }
 }

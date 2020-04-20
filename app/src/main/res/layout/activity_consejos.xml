@@ -7,8 +7,8 @@
     tools:context=".Consejos">
 
     <RelativeLayout
-        android:layout_width="411dp"
-        android:layout_height="731dp"
+        android:layout_width="448dp"
+        android:layout_height="802dp"
         android:background="@drawable/gradiente1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +32,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="405dp"
-        android:layout_height="554dp"
+        android:layout_width="374dp"
+        android:layout_height="557dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
@@ -53,58 +53,59 @@
             <TextView
                 android:id="@+id/textView26"
                 android:layout_width="match_parent"
-                android:layout_height="226dp"
+                android:layout_height="178dp"
                 android:text="Es normal y comprensible sentirse ansioso, especialmente si vive en un país o comunidad que ha sido afectada. Descubra lo que puede hacer en su comunidad. Discuta cómo mantenerse seguro con su lugar de trabajo, escuela o universidad."
-
-                android:textColor="#000000" />
+                android:textColor="#073680"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView24"
                 android:layout_width="match_parent"
-                android:layout_height="141dp"
+                android:layout_height="84dp"
                 android:text="Lávese las manos con frecuencia con un desinfectante de manos a base de alcohol o con agua y jabón."
-
-                android:textColor="#000000" />
+                android:textColor="#073680"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView25"
                 android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:textColor="#000000"
+                android:layout_height="105dp"
+                android:text="Mantenga al menos 1 metro (3 pies) de distancia entre usted y las demás personas, particularmente aquellas que tosan, estornuden y tengan fiebre."
+                android:textColor="#073680"
 
-                android:text="Mantenga al menos 1 metro (3 pies) de distancia entre usted y las demás personas, particularmente aquellas que tosan, estornuden y tengan fiebre." />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="172dp"
                 android:text="Evite tocarse los ojos, la nariz y la boca. Las manos tocan muchas superficies que pueden estar contaminadas con el virus. Si se toca los ojos, la nariz o la boca con las manos contaminadas, puedes transferir el virus de la superficie a si mismo."
-
-                android:textColor="#000000" />
+                android:textColor="#073680"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView33"
                 android:layout_width="match_parent"
-                android:layout_height="81dp"
+                android:layout_height="38dp"
                 android:text="QUÉDATEen casa lo máximo posible"
-
-                android:textColor="#000000" />
+                android:textColor="#073680"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView35"
                 android:layout_width="match_parent"
-                android:layout_height="380dp"
+                android:layout_height="264dp"
                 android:text="Manténgase al día de la información más reciente sobre el brote de COVID-19, a la que puede acceder en el sitio web de la OMS y a través de las autoridades de salud pública pertinentes a nivel nacional y local. La COVID-19 sigue afectando principalmente a la población de China, aunque se han producido brotes en otros países. La mayoría de las personas que se infectan padecen una enfermedad leve y se recuperan, pero en otros casos puede ser más grave.."
-
-                android:textColor="#000000" />
+                android:textColor="#073680"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView36"
                 android:layout_width="match_parent"
                 android:layout_height="209dp"
-                android:textColor="#000000"
-
-                android:text="Manténgase informado sobre las últimas novedades en relación con la COVID-19. Siga los consejos de su dispensador de atención de salud, de las autoridades sanitarias pertinentes a nivel nacional y local o de su empleador sobre la forma de protegerse a sí mismo y a los demás ante la COVID-19." />
+                android:text="Manténgase informado sobre las últimas novedades en relación con la COVID-19. Siga los consejos de su dispensador de atención de salud, de las autoridades sanitarias pertinentes a nivel nacional y local o de su empleador sobre la forma de protegerse a sí mismo y a los demás ante la COVID-19."
+                android:textColor="#073680"
+                android:textSize="18sp" />
 
         </LinearLayout>
     </ScrollView>

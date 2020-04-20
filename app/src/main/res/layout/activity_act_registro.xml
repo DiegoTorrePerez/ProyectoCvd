@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ActRegistro">
 
+    <RelativeLayout
+        android:layout_width="448dp"
+        android:layout_height="802dp"
+        android:background="@drawable/gradiente1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+
     <Spinner
         android:id="@+id/spDocumento"
         android:layout_width="match_parent"
@@ -36,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spNacionalidad" />
 
     <Button
-        android:id="@+id/btnRegistrar"
+        android:id="@+id/btnRegistrarse"
         android:layout_width="374dp"
         android:layout_height="49dp"
         android:layout_marginTop="52dp"
@@ -112,7 +123,7 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarse" />
 
     <EditText
         android:id="@+id/txtContraseña"
@@ -170,6 +181,6 @@
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

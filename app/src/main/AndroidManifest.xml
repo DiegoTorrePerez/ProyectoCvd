@@ -23,6 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Contacto"></activity>
+        <activity android:name=".Mapa" />
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,17 +46,12 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".Mapa"
-            android:label="@string/title_activity_mapa" />
         <activity android:name=".Consejos" />
         <activity android:name=".LlamadaEmergencia" />
-        <activity android:name=".Estadistica">
-
-    </activity>
+        <activity android:name=".Estadistica" />
         <activity android:name=".MisSintomas" />
         <activity android:name=".MiEstado" />
-        <activity android:name=".ActRegistro"></activity>
+        <activity android:name=".ActRegistro" />
         <activity android:name=".MainActivity" />
 
         <provider

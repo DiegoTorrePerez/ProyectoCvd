@@ -41,10 +41,7 @@ public class Login extends AppCompatActivity {
         asignarReferencia();
     }
 
-    public void SiguienteRegistrarse(View view) {
-        Intent siguiente  = new Intent(this, ActRegistro.class);
-        startActivity(siguiente);
-    }
+
     private void asignarReferencia() {
         txtDocumento = findViewById(R.id.txtDocumento);
         txtContraseña = findViewById(R.id.txtContraseña);
@@ -98,7 +95,7 @@ public class Login extends AppCompatActivity {
                             items.add(object.getString("Resultado_IdResultado"));
                         }
                         guardarPreferencias(items.get(0),items.get(1));
-                        Intent intent = new Intent(getApplicationContext(),ActEvaluacion.class);
+                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                         startActivity(intent);
                     }
                 }catch (JSONException e){
@@ -123,5 +120,10 @@ public class Login extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+
+    public void SiguRegistro(View view) {
+        Intent siguiente  = new Intent(this, ActRegistro.class);
+        startActivity(siguiente);
     }
 }

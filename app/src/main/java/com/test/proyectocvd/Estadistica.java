@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,41 +32,63 @@ import java.util.Map;
 public class Estadistica extends AppCompatActivity {
 
 
-    TextView txtTamizados, txtConfirmados, txtHospitalizados, txtUci, txtFallecidos;
-    RequestQueue queue;
+    TextView txtTamizados, txtConfirmados, txtHospitalizados, txtUci, txtFallecidos, txtFecha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_estadistica);
         txtTamizados = findViewById(R.id.txtTamizados);
-        queue = Volley.newRequestQueue(this);
+        txtConfirmados = findViewById(R.id.txtConfirmados);
+        txtHospitalizados = findViewById(R.id.txtHospitalizados);
+        txtUci = findViewById(R.id.txtUci);
+        txtFallecidos = findViewById(R.id.txtFallecidos);
+        txtFecha = findViewById(R.id.txtFecha);
         obtenerDatosVolley();
 
     }
+
     public void obtenerDatosVolley() {
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, "http://dchang.atwebpages.com/index.php/estadistica", null, new Response.Listener<JSONObject>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://dchang.atwebpages.com/index.php/estadistica", new Response.Listener<String>() {
             @Override
-            public void onResponse(JSONObject response) {
+            public void onResponse(String response) {
                 try {
-                    JSONArray mJsonArray = response.getJSONArray(null);
-                    for (int i=0;i<mJsonArray.length();i++){
-                        JSONObject mJsonObject = mJsonArray.getJSONObject(i);
-                        String fecha = mJsonObject.getString("fecha");
-                        Toast.makeText(Estadistica.this,"fecha: "+ fecha, Toast.LENGTH_LONG).show();
+                    JSONArray jsonArray = new JSONArray(response);
+                    Log.i("=======>",jsonArray.toString());
 
+                    List<String> items = new ArrayList<>();
+                    for (int i=0;i<jsonArray.length();i++) {
+                        JSONObject object = jsonArray.getJSONObject(i);
+                        items.add(object.getString("fecha"));
+                        items.add(object.getString("tamizados"));
+                        items.add(object.getString("confirmados"));
+                        items.add(object.getString("hospitalizados"));
+                        items.add(object.getString("uci"));
+                        items.add(object.getString("fallecidos"));
                     }
-                } catch (JSONException e){
-                    e.printStackTrace();
-                    Toast.makeText(Estadistica.this,"error2 ", Toast.LENGTH_LONG).show();
+                    txtFecha.setText(items.get(0));
+                    txtHospitalizados.setText(items.get(3));
+                    txtTamizados.setText(items.get(1));
+                    txtConfirmados.setText(items.get(2));
+                    txtUci.setText(items.get(4));
+                    txtFallecidos.setText(items.get(5));
 
+                } catch (JSONException e){
+                    Log.i("=======>",e.getMessage());
+                    Toast.makeText(Estadistica.this,"error2 ", Toast.LENGTH_LONG).show();
+                    txtTamizados.setText("2");
                 }
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(Estadistica.this,"error3 ", Toast.LENGTH_LONG).show();
+                txtTamizados.setText("3");
             }
         });
-        queue.add(request);
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+
     }
 }

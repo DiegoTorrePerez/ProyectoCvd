@@ -3,7 +3,6 @@ package com.test.proyectocvd;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -15,7 +14,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -23,13 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ActRegistro extends AppCompatActivity {
@@ -77,7 +69,7 @@ public class ActRegistro extends AppCompatActivity {
         txtDocumento = findViewById(R.id.txtDocumento);
         txtContraseña = findViewById(R.id.txtContraseña);
         txtOla= findViewById(R.id.txtOla);
-        btnRegistrar = findViewById(R.id.btnRegistrar);
+        btnRegistrar = findViewById(R.id.btnRegistrarse);
 
     }
     public void registrar(View view){
@@ -113,6 +105,11 @@ public class ActRegistro extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+
+
+            Intent siguiente  = new Intent(this, Foto.class);
+            startActivity(siguiente);
+
     }
 }
 
