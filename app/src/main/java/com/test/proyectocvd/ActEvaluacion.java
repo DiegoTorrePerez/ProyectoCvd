@@ -70,6 +70,7 @@ public class ActEvaluacion extends AppCompatActivity {
         }){
             @Override
             protected Map<String,String> getParams() {
+                Log.d("=====>","fase1");
                 Map<String, String> params = new HashMap<>();
                 params.put("IdPaciente ","2");
                 params.put("temperatura",etTemperatura.getText().toString());
@@ -115,6 +116,7 @@ public class ActEvaluacion extends AppCompatActivity {
                 } else if (rbTrabajo2.isChecked() == true) {
                     params.put("trabaja_salud", rbTrabajo2.getText().toString());
                 }
+                Log.d("=====>","fase2");
                 params.put("enfermedades","10");
                 params.put("puntaje ","40");
                 return params;
