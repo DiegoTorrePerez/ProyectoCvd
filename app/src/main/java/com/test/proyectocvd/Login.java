@@ -1,13 +1,17 @@
 package com.test.proyectocvd;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +23,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.safetynet.SafetyNet;
+import com.google.android.gms.safetynet.SafetyNetApi;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONArray;
@@ -31,18 +40,52 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Login extends AppCompatActivity {
+import static android.graphics.Color.BLACK;
 
+public class Login extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks {
+
+    CheckBox checkBox;
     TextView txtola;
     EditText txtDocumento, txtContraseña;
     Button btnIngresar;
+    GoogleApiClient googleApiClient;
+    String SiteKey = "6Lf2Ku8UAAAAAM0em8iDij9BVHgpeSpavP7VhRox";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_login);
+        Log.d("=====>",""+ FirebaseInstanceId.getInstance().getToken());
         setContentView(R.layout.activity_login);
         asignarReferencia();
-        setContentView(R.layout.activity_main);
-        Log.d("=====>",""+ FirebaseInstanceId.getInstance().getToken());
+        checkBox = findViewById(R.id.check_box);
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .addApi(SafetyNet.API)
+                .addConnectionCallbacks(Login.this)
+                .build();
+        googleApiClient.connect();
+
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkBox.isChecked()){
+                    SafetyNet.SafetyNetApi.verifyWithRecaptcha(googleApiClient, SiteKey)
+                            .setResultCallback(new ResultCallback<SafetyNetApi.RecaptchaTokenResult>() {
+                                @Override
+                                public void onResult(@NonNull SafetyNetApi.RecaptchaTokenResult recaptchaTokenResult) {
+                                    Status status = recaptchaTokenResult.getStatus();
+                                    if ((status != null) && status.isSuccess()){
+                                        Toast.makeText(getApplicationContext(),
+                                                "Successfully verified",Toast.LENGTH_LONG).show();
+                                        checkBox.setTextColor(Color.GREEN);
+                                    }
+                                }
+                            });
+                }else {
+                    checkBox.setTextColor(Color.BLACK);
+                }
+            }
+        });
     }
 
 
@@ -129,5 +172,15 @@ public class Login extends AppCompatActivity {
     public void SiguRegistro(View view) {
         Intent siguiente  = new Intent(this, ActRegistro.class);
         startActivity(siguiente);
+    }
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
     }
 }
